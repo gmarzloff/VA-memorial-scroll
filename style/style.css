@@ -1,0 +1,109 @@
+/* CHANGE THE ANIMATION DURATION HERE */
+:root { --animation-duration: 120s; }
+
+@font-face {
+    font-family: "NotoSerif";
+    src: url('fonts/NotoSerif-Regular.ttf');
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'NotoSerif';
+}
+h1, h2 { text-align: center; }
+
+#main-container {
+    width: 65%;
+    /* border: 1px green solid; */
+    position: absolute;
+    left: 2%;
+    top: 5%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    
+}
+#heading { margin-bottom: 50px;}
+
+#scroll-container {
+    /* border: 1px yellow solid; */
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#filler {
+    min-height: 100%;
+    width: 100%;
+    /* border: solid pink 1px; */
+}
+
+#names {
+    /* border: solid 1px orange; */
+    width: 100%;
+    padding: 50px 0 200px 0;
+
+     /* animation properties */
+    -moz-animation: my-animation var(--animation-duration) linear infinite;
+    -webkit-animation: my-animation var(--animation-duration) infinite linear;
+    -o-animation: my-animation var(--animation-duration) infinite linear;
+    animation: my-animation var(--animation-duration) linear infinite;
+
+}
+
+#names ul { padding: 0; }
+#names li {list-style: none; margin: 30px;}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+    0% { -moz-transform: translateY(0); }
+    100% { -moz-transform: translateY(-100%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100%); }
+}
+
+@keyframes my-animation {
+    0% {
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        -moz-transform: translateY(-100%);
+        transform: translateY(-100%); 
+    }
+}
+
+#names li {
+    text-align: center;
+    font-size: 2.8em;
+    /* border: solid 1px green; */
+}
+
+#flag {
+    position: absolute;
+    background: url('../img/flag.png') no-repeat left;
+    /* border: solid red 1px; */
+    top: 0;
+    right: 0;
+    z-index: -3;
+    width: 30%;
+    height: 100%;
+    background-size: cover;
+}
+
+#controls {
+    height: 20px;
+    width: 50%;
+    position: absolute;
+    bottom: 5px;
+    left: 5px; 
+}
+
+ 
