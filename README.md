@@ -1,5 +1,5 @@
 # In Memoriam Veterans Presentation
-Dynamically generates a list of names that vertically scroll for use during a semi-annual memorial service. Also supports music playback.
+Dynamically generates a list of names that vertically scroll for use during a semi-annual memorial service. Also supports music playback. Try a [demo](https://gmarzloff.github.io/VA-memorial-scroller/memorial.html).
 
 ![Screenshot](img/screenshot-memorial.jpg)
 
