@@ -120,5 +120,29 @@ h1, h2 { text-align: center; }
     bottom: 5px;
     left: 5px; 
 }
+/* Icons list */
+.i { 
+    width: 48px; 
+    height: 48px; 
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-color: #222;
+    border: solid #444 1px;
+    border-radius: 10px;
+    margin: 5px;
+}
 
- 
+.i.play { background-image: url(../img/icons/play.png); }
+.i.pause { background-image: url(../img/icons/pause.png); }
+.i.restart  { background-image: url(../img/icons/restart.png); }
+.i.gear { background-image: url(../img/icons/gear.png); }
+
+#settingsButton {
+    position:absolute;
+    bottom: 5px;
+    left: 5px;
+    z-index: 10;
+    transition: 0.2s;
+}
+
+#settingsButton:hover { background-image: url(../img/icons/gear-highlight.png); }

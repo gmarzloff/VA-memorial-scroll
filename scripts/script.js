@@ -40,7 +40,6 @@ function populateScroller(names){
 
     namesDiv.style.animation = 'none';
     namesDiv.style.animation = 'my-animation 30s linear infinite';
-    console.log(namesDiv.style);
 
 }
 
@@ -55,3 +54,4 @@ function setFillerHeights(){
     containerHeightFloat = Number(containerStyle.height.substr(0,containerStyle.height.length - 2));
     namesDiv.style.paddingBottom = containerHeightFloat >= 500 ? containerStyle.height : '500px';
 }
+

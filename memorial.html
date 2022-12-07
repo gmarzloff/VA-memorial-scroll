@@ -1,6 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="style/style.css" />
+        <link rel="stylesheet" href="style/modal.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>In Memoriam 2022</title>
     </head>
@@ -22,10 +23,41 @@
 
         </div>
 
-        <div id="controls">
-            <input type="file" id="file-selector" accept=".csv, .txt"></input>
+        <div id="settingsButton" class="i gear"></div>
+
+        <div id="settingsBox" class="modal">
+            <span class="close">&nbsp;x&nbsp;</span>
+            <div class="modal-header">List of Names</div>
+            <div class="modal-body flex-row">
+                <div class="file-picker">
+                    <label for="file-selector" class="file-input">Choose text file...</label>
+                    <input type="file" id="file-selector" accept=".csv, .txt"></input>
+                </div>
+                <div class="controls flex-row">
+                    <div class="i play" id="names-play-button"></div>
+                    <div class="i pause" id="names-pause-button"></div>
+                    <div class="i restart" id="names-restart-button"></div>
+                </div>
+            </div>
+            
+            <div class="modal-header">Music</div>
+            <div class="modal-body flex-row">
+                <div class="file-picker">
+                    <label for="music-selector" class="file-input">Choose music file...</label>
+                    <input type="file" id="music-selector"></input>
+                </div>
+                <div class="controls flex-row">
+                    <div class="i play" id="music-play-button"></div>
+                    <div class="i pause" id="music-pause-button"></div>
+                    <div class="i restart" id="music-restart-button"></div>
+                </div>
+            </div>
+
+            
         </div>
 
+        <script src="scripts/script.js" type="text/javascript"></script>
+        <script src="scripts/modal.js" type="text/javascript"></script>
     </body>
-    <script src="scripts/script.js" type="text/javascript"></script>
+    
 </html>
