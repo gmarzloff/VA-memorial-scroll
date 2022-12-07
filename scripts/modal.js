@@ -27,3 +27,26 @@ span.onclick = function() {
 //   }
 // }
 
+// Button actions
+
+// var namesPlayButton = document.getElementById("names-play-button");
+// namesPlayButton.onclick = function() {
+//   namesPlayButton.style.animationPlayState = "playing";
+// }
+
+// var namesPauseButton = document.getElementById("names-pause-button");
+// namesPauseButton.onclick = function() {
+//   namesPauseButton.style.animationPlayState = "paused";
+// }
+
+
+var namesRestartButton = document.getElementById("names-restart-button");
+namesRestartButton.onclick = function() {
+      namesDiv = document.getElementById("names");
+      const names_clone = namesDiv.cloneNode(true);
+      namesDiv.parentNode.replaceChild(names_clone, namesDiv);
+}
+
+
+
+
