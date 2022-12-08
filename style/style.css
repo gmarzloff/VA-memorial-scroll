@@ -53,11 +53,9 @@ h1, h2 { text-align: center; }
 #filler {
     min-height: 100%;
     width: 100%;
-    /* border: solid pink 1px; */
 }
 
 #names {
-    /* border: solid 1px orange; */
     width: 100%;
     padding: 50px 0 200px 0;
 
@@ -105,7 +103,6 @@ h1, h2 { text-align: center; }
 #flag {
     position: absolute;
     background: url('../img/flag.png') no-repeat left;
-    /* border: solid red 1px; */
     top: 0;
     right: 0;
     z-index: -3;
