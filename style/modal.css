@@ -78,6 +78,16 @@
     cursor: pointer;
     min-width: 150px;
     margin: 10px;
+    border-radius: 5px;
+  }
+  .file-input:hover {
+    background-color: #444;
+  }
+
+  #names-filename-label {
+    visibility: hidden;
+    margin-bottom: 20px;
+    text-align: center;
   }
 
   /* Add Animation */

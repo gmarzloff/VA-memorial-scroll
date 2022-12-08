@@ -1,5 +1,5 @@
 /* CHANGE THE ANIMATION DURATION HERE */
-:root { --animation-duration: 120s; }
+:root { --animation-duration: 240s; }
 
 @font-face {
     font-family: "NotoSerif";
@@ -62,6 +62,7 @@ h1, h2 { text-align: center; }
     padding: 50px 0 200px 0;
 
      /* animation properties */
+    animation-play-state: 'running';
     -moz-animation: my-animation var(--animation-duration) linear infinite;
     -webkit-animation: my-animation var(--animation-duration) infinite linear;
     -o-animation: my-animation var(--animation-duration) infinite linear;
@@ -70,7 +71,7 @@ h1, h2 { text-align: center; }
 }
 
 #names ul { padding: 0; }
-#names li {list-style: none; margin: 30px;}
+#names li {list-style: none; margin: 80px;}
 
 /* for Firefox */
 @-moz-keyframes my-animation {
@@ -135,6 +136,12 @@ div.i:hover {
     border: solid #444 1px;
     border-radius: 10px;
     margin: 5px;
+
+    animation-name: fadeIn;
+    animation-duration: 0.25;
+}
+.i:hover {
+    background-color: #444;
 }
 
 .i.play { background-image: url(../img/icons/play.png); }

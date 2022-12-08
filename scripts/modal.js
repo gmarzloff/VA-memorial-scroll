@@ -19,34 +19,27 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
-// window.onclick = function(event) {
-//   console.log(event.target);
-//   if (event.target != clickbox && event.target != btn) {
-//     modal.style.display = "none";
-//   }
-// }
-
 // Button actions
+var namesPlayButton = document.getElementById("names-play-button");
+namesPlayButton.onclick = function() {
+  namesDiv = document.getElementById("names");
+  namesDiv.style.animationPlayState = 'running';
+}
 
-// var namesPlayButton = document.getElementById("names-play-button");
-// namesPlayButton.onclick = function() {
-//   namesPlayButton.style.animationPlayState = "playing";
-// }
-
-// var namesPauseButton = document.getElementById("names-pause-button");
-// namesPauseButton.onclick = function() {
-//   namesPauseButton.style.animationPlayState = "paused";
-// }
-
-
-var namesRestartButton = document.getElementById("names-restart-button");
-namesRestartButton.onclick = function() {
-      namesDiv = document.getElementById("names");
-      const names_clone = namesDiv.cloneNode(true);
-      namesDiv.parentNode.replaceChild(names_clone, namesDiv);
+var namesPauseButton = document.getElementById("names-pause-button");
+namesPauseButton.onclick = function() {
+  namesDiv = document.getElementById("names");
+  namesDiv.style.animationPlayState = 'paused';
 }
 
 
+var namesRestartButton = document.getElementById("names-restart-button");
+namesRestartButton.onclick = restartScroller;
 
+
+function restartScroller(){
+  namesDiv = document.getElementById("names");
+  const names_clone = namesDiv.cloneNode(true);
+  namesDiv.parentNode.replaceChild(names_clone, namesDiv);
+}
 

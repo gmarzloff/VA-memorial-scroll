@@ -4,6 +4,10 @@ const fileSelector = document.getElementById('file-selector');
 fileSelector.addEventListener('change', (event) => {
     const files = event.target.files;
     readFile(files[0]);
+
+    var textlabel = document.getElementById('names-filename-label');
+    textlabel.innerHTML = files[0].name;
+    textlabel.style.visibility = 'visible';
 });
 
  window.addEventListener('resize', function(event){
@@ -11,14 +15,16 @@ fileSelector.addEventListener('change', (event) => {
  });
 
 function readFile(file){
-    
     const reader = new FileReader();
     reader.addEventListener('load', (event) => {
         txt = event.target.result;
         names = txt.split("\n");
-        alert(names.length + " names loaded.")
-        populateScroller(names);
+        
+        var textlabel = document.getElementById('names-filename-label');
+        textlabel.innerHTML += " (" + names.length + " names loaded)";
 
+        populateScroller(names);
+        restartScroller();
     });
     reader.readAsText(file);
 }
@@ -48,7 +54,7 @@ function setFillerHeights(){
     containerStyle = getComputedStyle(container)
 
     filler = document.getElementById('filler');
-    filler.style.height = containerStyle.height;
+    filler.style.height = containerStyle.height * 0.5;
     
     namesDiv = document.getElementById('names');
     containerHeightFloat = Number(containerStyle.height.substr(0,containerStyle.height.length - 2));
