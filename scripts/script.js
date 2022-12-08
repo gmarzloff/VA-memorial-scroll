@@ -10,6 +10,17 @@ fileSelector.addEventListener('change', (event) => {
     textlabel.style.visibility = 'visible';
 });
 
+var audio_player = document.getElementById('music');
+var audio_player_container = document.getElementById('audio-player-container');
+const musicSelector = document.getElementById('music-selector');
+
+musicSelector.addEventListener('change', (event) => {
+    var file = event.target.files[0];
+    audio_player.src = URL.createObjectURL(file);
+    audio_player_container.style.visibility = 'visible';
+});
+
+
  window.addEventListener('resize', function(event){
     setFillerHeights()
  });

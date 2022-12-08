@@ -44,16 +44,21 @@
             <div class="modal-header">Music</div>
             <div class="modal-body flex-row">
                 <div class="file-picker">
-                    <label for="music-selector" class="file-input">Choose music file...</label>
-                    <input type="file" id="music-selector"></input>
+                    <label for="music-selector" class="file-input">Choose...</label>
+                    <input type="file" id="music-selector" accept="audio/*"></input>
                 </div>
-                <div class="controls flex-row">
+                <div id="audio-player-container">
+                    <audio id="music" autoplay="autoplay" loop controls>
+                        Your browser does not support the audio format.
+                    </audio>
+                </div>
+                <!-- <div class="controls flex-row">
                     <div class="i play" id="music-play-button"></div>
                     <div class="i pause" id="music-pause-button"></div>
                     <div class="i restart" id="music-restart-button"></div>
-                </div>
+                </div> -->
             </div>
-
+            
             
         </div>
 

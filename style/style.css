@@ -1,5 +1,5 @@
 /* CHANGE THE ANIMATION DURATION HERE */
-:root { --animation-duration: 240s; }
+:root { --animation-duration: 300s; }
 
 @font-face {
     font-family: "NotoSerif";
@@ -147,7 +147,8 @@ div.i:hover {
 .i.play { background-image: url(../img/icons/play.png); }
 .i.pause { background-image: url(../img/icons/pause.png); }
 .i.restart  { background-image: url(../img/icons/restart.png); }
-.i.gear { background-image: url(../img/icons/gear.png); }
+.i.gear { background-image: url(../img/icons/gear.png); width: 36px; height: 36px;}
+.i.gear:hover { background-color: initial;}
 
 #settingsButton {
     position:absolute;
