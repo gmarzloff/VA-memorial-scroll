@@ -6,7 +6,7 @@ Dynamically generates a list of names that vertically scroll for use during a se
 ## Installation
 1. Save the `VA-memorial-scroller` folder anywhere on your hard drive. It does not require a web server to run. 
 1. Open `memorial.html` in Google Chrome (). 
-1. Click the bottom left gear icon to load the names list and music. The names list must be a text file, with one name per line. A sample file `presidents.csv` is located in the  `names` folder. 
+1. Click the bottom left gear icon to load the names list and music. The names list must be a text file, with one name per line. See below for converting excel sheet to a text file. A sample file `presidents.csv` is located in the  `names` folder. 
 
 Example: 
 ```
@@ -39,6 +39,28 @@ To change the scrolling speed, you must change the total duration of the scroll.
 /* CHANGE THE ANIMATION DURATION HERE */
 :root { --animation-duration: 120s; }
 ```
+
+## How to prepare a text file from Excel
+
+If the list of names is spread over columns, you can process the text into a new column as follows. 
+
+1. Make a new column and the use the formula `=PROPER(CONCAT(B2," ",A2))`. `CONCAT()` joins text and `PROPER()` capitalizes first letters and makes the rest lowercase.
+
+![Screenshot](img/excel/excel-namelist01.jpg)
+
+2. Then extend the formula down the column by double-clicking the bottom-right corner or drag the corner to the final cell. 
+
+![Screenshot](img/excel/excel-namelist02.jpg)
+
+3. Open notepad or other text editor. Quickest way is `Windows Key` + `R`, or click Start -> Run..., type `notepad` then enter. Copy the Excel column with the formatted names and paste it into notepad. 
+
+![Screenshot](img/excel/excel-namelist03.jpg)
+ 
+![Screenshot](img/excel/excel-namelist04.jpg)
+
+![Screenshot](img/excel/excel-namelist05.jpg)
+
+4. Save the new file anywhere, though `names/private/` in the repository is a convenient path that is ignored from version control. 
 
 ### Credits
 Developed by George Marzloff, MD. This web app is open source and may be freely used under the [MIT License](https://opensource.org/licenses/MIT). 
