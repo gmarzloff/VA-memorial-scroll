@@ -5,7 +5,7 @@ Dynamically generates a list of names that vertically scroll for use during a se
 
 ## Installation
 1. Save the `VA-memorial-scroller` folder anywhere on your hard drive. It does not require a web server to run. 
-1. Open `memorial.html` in Google Chrome (). 
+1. Open `memorial.html` in Google Chrome. 
 1. Click the bottom left gear icon to load the names list and music. The names list must be a text file, with one name per line. See below for converting excel sheet to a text file. A sample file `presidents.csv` is located in the  `names` folder. 
 
 Example: 
