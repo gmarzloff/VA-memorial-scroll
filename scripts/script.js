@@ -1,6 +1,8 @@
 
 const fileSelector = document.getElementById('file-selector');
 
+document.getElementById('year').textContent = new Date().getFullYear();
+
 fileSelector.addEventListener('change', (event) => {
     const files = event.target.files;
     readFile(files[0]);
